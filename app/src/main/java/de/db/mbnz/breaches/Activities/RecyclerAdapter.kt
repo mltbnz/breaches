@@ -2,18 +2,14 @@ package de.db.mbnz.breaches.Activities
 
 
 import android.support.v7.widget.RecyclerView
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import de.db.mbnz.breaches.Models.Breach
-import kotlinx.android.synthetic.main.recyclerview_item_row.view.*
-import android.R.layout
-import kotlinx.android.synthetic.main.activity_main.view.*
-import de.db.mbnz.breaches.R
-import android.support.annotation.LayoutRes
-import android.util.Log
 import de.db.mbnz.breaches.Extensions.inflate
-import de.db.mbnz.breaches.Network.AsyncTaskCallback
+import de.db.mbnz.breaches.Models.Breach
+import de.db.mbnz.breaches.R
+import kotlinx.android.synthetic.main.recyclerview_item_row.view.*
+import android.view.LayoutInflater
+import android.widget.TextView
 
 /**
  * Created by mbnz on 08.11.17.
@@ -34,18 +30,20 @@ class RecyclerAdapter(private val breaches: List<Breach>) : RecyclerView.Adapter
     }
 
     class BreachHolder(v: View) : RecyclerView.ViewHolder(v) {
-        private var view: View = v
+        private var nameLabel = v.findViewById<TextView>(R.id.nameTextView)
+        private var titleLabel = v.findViewById<TextView>(R.id.titleTextView)
+        private var domainLabel = v.findViewById<TextView>(R.id.domainTextView)
+        private var breachDateLabel = v.findViewById<TextView>(R.id.breachDateTextView)
         private var breach: Breach? = null
 
-        init {
-        }
+        init {}
 
         fun bind(breach: Breach) {
             this.breach = breach
-            view.name.text = breach.name
-            view.title.text = breach.title
-            view.domain.text = breach.domain
-            view.breachDate.text = breach.breachDate
+            nameLabel.text = breach.name
+            titleLabel.text = breach.title
+            domainLabel.text = breach.domain
+            breachDateLabel.text = breach.breachDate
         }
     }
 }
