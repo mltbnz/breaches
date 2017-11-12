@@ -11,7 +11,7 @@
         android:id="@+id/placeCard"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="8dp"
+        android:layout_margin="12dp"
         card_view:cardBackgroundColor="@color/backgroundColor"
         card_view:cardCornerRadius="4dp"
         card_view:cardElevation="3dp">
@@ -26,8 +26,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:fontFamily="@font/source_code_pro"
-                android:textColor="@android:color/white"
-                android:textSize="16dp"
+                android:textColor="@color/domainTitleColor"
+                android:textSize="@dimen/cardFontSize"
                 android:textStyle="bold" />
 
             <TextView
@@ -36,8 +36,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/domainTextView"
                 android:fontFamily="@font/source_code_pro"
-                android:textColor="@android:color/white"
-                android:textSize="14dp" />
+                android:textColor="@color/nameTitleColor"
+                android:textSize="@dimen/cardFontSize" />
 
             <TextView
                 android:id="@+id/breachDateTextView"
@@ -45,7 +45,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/nameTextView"
                 android:fontFamily="@font/source_code_pro"
-                android:textColor="@android:color/white" />
+                android:textColor="@color/breachDateTitleColor"
+                android:textSize="@dimen/cardFontSize"/>
 
         </RelativeLayout>
 

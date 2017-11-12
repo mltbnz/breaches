@@ -1,5 +1,6 @@
 package de.db.mbnz.breaches.Models
 
+import java.io.Serializable
 import java.util.*
 
 /**
@@ -20,7 +21,7 @@ class Breach(val Name: String,
              val IsSensitive: Boolean,
              val IsActive: Boolean,
              val IsRetired: Boolean,
-             val IsSpamList: Boolean) {
+             val IsSpamList: Boolean): Serializable {
 
     init {
     }
