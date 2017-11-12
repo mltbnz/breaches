@@ -28,13 +28,9 @@ class RecyclerAdapter(private val breaches: List<Breach>, private val listener: 
     override fun getItemCount() = breaches.size
 
     override fun onBindViewHolder(holder: BreachHolder, position: Int) {
-        val breach = breaches.get(position)
+        val breach = breaches[position]
         holder.bind(breach)
-        holder.cardView.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                listener.onItemClick(holder.breach)
-            }
-        })
+        holder.cardView.setOnClickListener { listener.onItemClick(holder.breach) }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BreachHolder {
@@ -53,9 +49,9 @@ class RecyclerAdapter(private val breaches: List<Breach>, private val listener: 
 
         fun bind(breach: Breach) {
             this.breach = breach
-            domainLabel.text = "\uD83C\uDF0D: " + breach.Domain
-            nameLabel.text = "\uD83D\uDCEE: "  +  breach.Name
-            breachDateLabel.text = "\uD83D\uDCC5: "  + breach.BreachDate
+            domainLabel.text = """🌍: ${breach.Domain}"""
+            nameLabel.text = """📮: ${breach.Name}"""
+            breachDateLabel.text = """📅: ${breach.BreachDate}"""
         }
     }
 }

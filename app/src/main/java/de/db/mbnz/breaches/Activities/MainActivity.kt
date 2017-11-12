@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity(), AsyncTaskCallback {
             val intent = BreachDetailActivity.newIntent(this, it)
             startActivity(intent)
         }
-
     }
 
     // OnItemClickListener
