@@ -3,6 +3,7 @@ package de.db.mbnz.breaches.Activities
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import de.db.mbnz.breaches.Adapter.RecyclerAdapter
 import de.db.mbnz.breaches.Models.Breach
 import de.db.mbnz.breaches.Network.AsyncTaskCallback
 import de.db.mbnz.breaches.Network.GetBreachesTask

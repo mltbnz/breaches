@@ -1,6 +1,5 @@
 package de.db.mbnz.breaches.Network
 
-import android.nfc.Tag
 import android.os.AsyncTask
 import android.util.Log
 import com.squareup.moshi.JsonAdapter
@@ -14,7 +13,6 @@ import java.io.InputStreamReader
 import java.lang.reflect.Type
 import java.net.HttpURLConnection
 import java.net.URL
-import java.nio.Buffer
 
 
 /**
@@ -58,7 +56,7 @@ class GetBreachesTask(): AsyncTask<Unit, Unit, String>() {
         val moshi = Moshi.Builder().build()
         val type: Type = Types.newParameterizedType(List::class.java, Breach::class.java)
         val adapter: JsonAdapter<List<Breach>> = moshi.adapter(type)
-        val breaches = adapter.fromJson(result)
+        val breaches: List<Breach>? = adapter.fromJson(result)
         delegate.onSuccess(breaches)
     }
 

@@ -1,6 +1,7 @@
 package de.db.mbnz.breaches.Network
 
-import okhttp3.*
+import okhttp3.OkHttpClient
+import okhttp3.Request
 import java.io.InputStream
 
 /**
