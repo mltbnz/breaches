@@ -10,6 +10,7 @@ import de.db.mbnz.breaches.Models.Breach
 import de.db.mbnz.breaches.Network.AsyncTaskCallback
 import de.db.mbnz.breaches.Network.GetBreachesTask
 import de.db.mbnz.breaches.R
+import de.db.mbnz.breaches.ViewModels.DetailViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), AsyncTaskCallback {
@@ -35,7 +36,8 @@ class MainActivity : AppCompatActivity(), AsyncTaskCallback {
 
     private fun showDetailActivity(item: Breach?) {
         item?.let {
-            val intent = BreachDetailActivity.newIntent(this, it)
+            val viewModel = DetailViewModel(it)
+            val intent = BreachDetailActivity.newIntent(this, viewModel)
             startActivity(intent)
         }
     }
