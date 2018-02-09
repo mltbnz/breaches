@@ -1,6 +1,5 @@
 package de.db.mbnz.breaches.Adapter
 
-
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.View
@@ -11,7 +10,6 @@ import android.widget.TextView
 import android.view.LayoutInflater
 import de.db.mbnz.breaches.ViewModels.BreachHolderViewModel
 import de.db.mbnz.breaches.Views.BreachHolder
-
 
 /**
  * Created by mbnz on 08.11.17.
