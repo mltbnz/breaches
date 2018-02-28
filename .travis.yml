@@ -29,6 +29,7 @@ before_script:
   - emulator -avd test -no-audio -no-window &
 
 script:
+  - chmod +x ./gradlew
   - ./gradlew build lint test assembleAndroidTest -PdisablePreDex;
   - android-wait-for-emulator
   # Unlock the device
