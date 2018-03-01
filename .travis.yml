@@ -35,9 +35,5 @@ android:
 script:
   - chmod +x ./gradlew
   - ./gradlew build lint test assembleAndroidTest -PdisablePreDex;
-  # Unlock the device
-  - adb shell input keyevent 82
-  # Avoid having it lock itself again.
-  - adb shell svc power stayon true
   # Make gradle output info-level logging, so the tests do not timeout
   - ./gradlew connectedCheck --info -PdisablePreDex;
