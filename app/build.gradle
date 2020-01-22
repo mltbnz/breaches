@@ -34,5 +34,5 @@ dependencies {
     // Remote dependencies
     compile 'com.squareup.okhttp3:okhttp:3.9.0'
     implementation "com.squareup.moshi:moshi-adapters:1.9.2"
-    implementation "com.squareup.moshi:moshi-kotlin:1.5.0"
+    implementation "com.squareup.moshi:moshi-kotlin:1.9.2"
 }
