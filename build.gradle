@@ -2,7 +2,7 @@
 apply plugin: 'kotlin-android-extensions'
 
 buildscript {
-    ext.kotlin_version = '1.2.21'
+    ext.kotlin_version = '1.2.71'
     repositories {
         google()
         jcenter()
